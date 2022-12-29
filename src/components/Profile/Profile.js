@@ -1,4 +1,3 @@
-import { Stats } from 'components/Stats/Stats';
 import {
   ProfileImg,
   StatsList,
