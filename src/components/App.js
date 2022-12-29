@@ -8,10 +8,11 @@ import statsArray from '../data.json';
 import friendsArray from '../friends.json';
 import transactionsArray from '../transactions.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { Container, StatsBox } from './App.styled';
 
 export const App = () => {
   return (
-    <div>
+    <Container>
       <div>
         <Profile
           username={user.username}
@@ -21,10 +22,10 @@ export const App = () => {
           stats={user.stats}
         />
       </div>
-      <div>
+      <StatsBox>
         <StatsTitle />
         <StatsBoard stats={statsArray} />
-      </div>
+      </StatsBox>
 
       <div>
         <FriendList friends={friendsArray} />
@@ -33,6 +34,6 @@ export const App = () => {
       <div>
         <TransactionHistory transactions={transactionsArray} />
       </div>
-    </div>
+    </Container>
   );
 };

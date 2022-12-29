@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 
+import { StatsText } from './Stats.styled';
+
 export const Stats = ({ label, percentage }) => {
   return (
     <>
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage} % </span>
+      <StatsText className="label">{label}</StatsText>
+      <StatsText className="percentage">{percentage} % </StatsText>
     </>
   );
 };

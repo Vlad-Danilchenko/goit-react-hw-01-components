@@ -1,3 +1,5 @@
+import { Title } from './StatsTitle.styled';
+
 export const StatsTitle = () => {
-  return <h2 className="title">Upload stats</h2>;
+  return <Title>Upload stats</Title>;
 };

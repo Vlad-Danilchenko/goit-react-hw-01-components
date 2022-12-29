@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
 
 import { Stats } from 'components/Stats/Stats';
+import { StatsList, StatsItem } from './StatsBoard.styled';
 
 export const StatsBoard = ({ stats }) => {
   return (
-    <ul className="stat-list">
+    <StatsList>
       {stats.map(({ id, label, percentage }) => (
-        <li key={id}>
+        <StatsItem key={id}>
           <Stats label={label} percentage={percentage} />
-        </li>
+        </StatsItem>
       ))}
-    </ul>
+    </StatsList>
   );
 };
 
