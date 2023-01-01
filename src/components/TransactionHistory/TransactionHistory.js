@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-import { Transaction } from 'components/Transaction/Transaction';
 import {
   TransactionTable,
   TebleHead,
   TableRow,
+  TD,
 } from './TransactionHistory.styled';
 export const TransactionHistory = ({ transactions }) => {
   return (
@@ -20,7 +20,9 @@ export const TransactionHistory = ({ transactions }) => {
       <tbody>
         {transactions.map(({ id, type, amount, currency }) => (
           <TableRow key={id}>
-            <Transaction type={type} amount={amount} currency={currency} />
+            <TD>{type}</TD>
+            <TD>{amount}</TD>
+            <TD>{currency}</TD>
           </TableRow>
         ))}
       </tbody>

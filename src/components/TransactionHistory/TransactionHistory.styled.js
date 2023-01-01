@@ -18,3 +18,7 @@ export const TableRow = styled.tr`
     background-color: #8bc2eb;
   }
 `;
+export const TD = styled.td`
+  border: 1px solid #7888f5;
+  text-align: center;
+`;

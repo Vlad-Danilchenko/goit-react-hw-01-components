@@ -1,12 +1,11 @@
 import { Profile } from './Profile/Profile';
-import { StatsTitle } from './StatsTitle/StatsTitle';
-import { StatsBoard } from './StatsBoard/StatsBoard';
+import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
 
-import user from '../user.json';
-import statsArray from '../data.json';
-import friendsArray from '../friends.json';
-import transactionsArray from '../transactions.json';
+import user from '../data/user.json';
+import statsArray from '../data/data.json';
+import friendsArray from '../data/friends.json';
+import transactionsArray from '../data/transactions.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import { Container, StatsBox } from './App.styled';
 
@@ -23,8 +22,7 @@ export const App = () => {
         />
       </div>
       <StatsBox>
-        <StatsTitle />
-        <StatsBoard stats={statsArray} />
+        <Statistics title="Upload stats" stats={statsArray} />
       </StatsBox>
 
       <div>
